@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>搜索提示</title>
+</head>
+<body>
+  <div id="app">
+
+    <input v-model="text" />
+    <button>百度一下</button>
+
+    <ol v-if="tips">
+      <li v-for="tip in tips" :key="tip">
+        {{ tip.q }}
+      </li>
+    </ol>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
